@@ -15,33 +15,33 @@ describe('Selectors', function() {
 	});
 	
 	it('selects element by id', function() {
-		expect($(__).attr('id')).toEqual('div-2', 'selected id');
+		expect($(__).attr('id')).toEqual('div-2');
 	});
 
 	it('selects elements by class', function() {
-		expect($(__).attr('class')).toEqual('div_class', 'selected class');
+		expect($(__).attr('class')).toEqual('div_class');
 	});
 	
 	it('selects child element DIV', function() {
-		expect($('__ > div').attr('id')).toEqual('div-2-child', 'child element');
+		expect($('__ > div').attr('id')).toEqual('div-2-child');
 	});
 
 	it('selects descendent element DIV', function() {
-		expect($('#div-2 #div-2-grandchild').attr('id')).toEqual(__, 'descendent element');
+		expect($('#div-2 #div-2-grandchild').attr('id')).toEqual(__);
 	});
 	
 	it('selects all DIVs', function() {
-		expect($('#fixture div').length).toEqual(__, 'number of elements selected');
+		expect($('#fixture div').length).toEqual(__);
 	});
 
-	it('selects iterates through matched elements', function() {
+	it('iterates through matched elements', function() {
 		var matchedElements = [];
 		$('.div_class').each(function() {
 			matchedElements.push({'id':$(this).attr('id')});
 		});
 		
-		expect(matchedElements.length).toEqual(__, 'number of elements iterated');
-		expect(matchedElements[1].id).toEqual(__, '2nd element\'s id');
+		expect(matchedElements.length).toEqual(__);
+		expect(matchedElements[1].id).toEqual(__);
 	});
 	
 });

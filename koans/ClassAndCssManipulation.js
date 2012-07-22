@@ -10,6 +10,8 @@ describe('Selectors', function() {
 				'   </div>'+
 				'</div>'+
 				'<div class="div_class" id="div-3" />');
+		
+		this.addMatchers(jQueryKataMatchers);
 	});
 	
 	it('adds class to DIV', function() {
