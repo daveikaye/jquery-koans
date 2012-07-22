@@ -11,15 +11,7 @@ describe('Selectors', function() {
 				'</div>'+
 				'<div class="div_class" id="div-3" />');
 		
-		this.addMatchers({
-		    toEqual: function(expected, customMessage) {
-		    	this.message = function () {
-		            return "Expected " + customMessage + " to be " + expected;
-		        }
-		    	
-		    	return this.actual == expected;
-		    }
-		});
+		this.addMatchers(jQueryKataMatchers);
 	});
 	
 	it('selects element by id', function() {
