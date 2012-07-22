@@ -10,16 +10,6 @@ describe('Selectors', function() {
 				'   </div>'+
 				'</div>'+
 				'<div class="div_class" id="div-3" />');
-		
-		this.addMatchers({
-		    toEqual: function(expected, customMessage) {
-		    	this.message = function () {
-		            return "Expected " + customMessage + " to be " + expected;
-		        }
-		    	
-		    	return this.actual == expected;
-		    }
-		});
 	});
 	
 	it('adds class to DIV', function() {
@@ -28,6 +18,10 @@ describe('Selectors', function() {
 	});
 
 	it('removes class from DIV', function() {
+		expect($('#div-1')).not.toHaveClass('div_class');
+	});
+
+	it('toggles class from DIV', function() {
 		expect($('#div-1')).not.toHaveClass('div_class');
 	});
 	
