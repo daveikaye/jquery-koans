@@ -15,20 +15,26 @@ describe('Selectors', function() {
 	});
 	
 	it('adds html inside element', function() {
+		$('#div-1').html(__);
+		
 		expect($('#div-1').html()).toEqual('<p>O hai!</p>');
 	});
 
 	it('adds text inside element', function() {
+		$('#div-1').text(__);
+		
 		expect($('#div-1').text()).toEqual('O hai!');
 	});
 
 	it('appends inside element', function() {
 		$('#div-2-grandchild').append(__);
+		
 		expect($('#div-2-grandchild').html()).toEqual('Hello world<p>Good night nurse.</p>');
 	});
 
 	it('inserts after element', function() {
 		$('#div-2').after(__);
+		
 		expect($('#div-2_5').length).not.toEqual(0);
 	});
 	
