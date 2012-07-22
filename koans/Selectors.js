@@ -31,7 +31,7 @@ describe('Selectors', function() {
 	});
 	
 	it('selects child element DIV', function() {
-		expect($(__).attr('id')).toEqual('div-2-child', 'child element');
+		expect($('__ > div').attr('id')).toEqual('div-2-child', 'child element');
 	});
 
 	it('selects descendent element DIV', function() {
