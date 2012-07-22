@@ -26,5 +26,10 @@ describe('Selectors', function() {
 		$('#div-2-grandchild').append(__);
 		expect($('#div-2-grandchild').html()).toEqual('Hello world<p>Good night nurse.</p>');
 	});
+
+	it('inserts after element', function() {
+		$('#div-2').after(__);
+		expect($('#div-2_5').length).not.toEqual(0);
+	});
 	
 });
