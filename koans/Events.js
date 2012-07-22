@@ -1,4 +1,4 @@
-describe('Selectors', function() {
+describe('Events', function() {
 	beforeEach(function() {
 		$('#fixture').remove();
 		$('body').append('<div id="fixture"></div>');

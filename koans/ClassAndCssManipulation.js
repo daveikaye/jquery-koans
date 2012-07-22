@@ -1,4 +1,4 @@
-describe('Selectors', function() {
+describe('ClassAndCssManipulation', function() {
 	beforeEach(function() {
 		$('#fixture').remove();
 		$('body').append('<div id="fixture"></div>');
