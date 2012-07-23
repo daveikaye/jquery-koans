@@ -35,35 +35,35 @@ describe('ShowHideAndAmimate', function() {
 		expect($('#link1').is(':visible')).toBeFalsy();
 	});
 
-	it('fades out link', function() {
-		$(__).fadeOut(__);
-		
-		waits(1010);
-		runs(function() {
-				expect($('#link1').is(':visible')).toBeFalsy();
-			});
-	});
-	
-	it('animates link', function() {
-		$('#link1').animate({'opacity':'0'}, 1000);
-		
-		waits(1010)
-		runs(function() {
-			expect($('#link1').css(__)).toEqual('0')
-		})
-	});
-
-	it('slides down', function() {
-		var done = false;
-		
-		$('#div-2-grandchild').hide().slideDown(2000, function() {
-			done = true;
-		});
-		
-		waitsFor(function() {return done});
-		runs(function() {
-			expect(done).toEqual(true);
-		});
-	});
+//	it('fades out link', function() {
+//		$(__).fadeOut(__);
+//		
+//		waits(1010);
+//		runs(function() {
+//				expect($('#link1').is(':visible')).toBeFalsy();
+//			});
+//	});
+//	
+//	it('animates link', function() {
+//		$('#link1').animate({'opacity':'0'}, 1000);
+//		
+//		waits(1010)
+//		runs(function() {
+//			expect($('#link1').css(__)).toEqual('0')
+//		})
+//	});
+//
+//	it('slides down', function() {
+//		var done = false;
+//		
+//		$('#div-2-grandchild').hide().slideDown(2000, function() {
+//			done = true;
+//		});
+//		
+//		waitsFor(function() {return done});
+//		runs(function() {
+//			expect(done).toEqual(true);
+//		});
+//	});
 	
 });
